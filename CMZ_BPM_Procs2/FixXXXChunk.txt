@@ -1,0 +1,6 @@
+Update xc
+set xc.Chunk = xd.Content
+from Ice.XXXDef xd
+inner join Ice.XXXChunk xc on xd.Company = xc.Company 
+and xd.TypeCode = xc.TypeCode 
+and xd.Key1 = xc.Key1 and xd.Key1 = 'MfgsysTemplate'
