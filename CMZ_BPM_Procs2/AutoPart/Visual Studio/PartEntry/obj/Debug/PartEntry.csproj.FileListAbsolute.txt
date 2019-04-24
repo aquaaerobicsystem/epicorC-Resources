@@ -1,0 +1,12 @@
+C:\Epicor\ERP10\LocalClients\ERP10\EpiFormTemplate.exe.config
+C:\Epicor\ERP10\LocalClients\ERP10\EpiFormTemplate.exe
+C:\Epicor\ERP10\LocalClients\ERP10\EpiFormTemplate.pdb
+C:\Insights 2019\Extended Ed\CMZ_BPM_Procs\VS Projects\PartEntry\PartEntry\obj\Debug\PartEntry.csprojResolveAssemblyReference.cache
+C:\Insights 2019\Extended Ed\CMZ_BPM_Procs\VS Projects\PartEntry\PartEntry\obj\Debug\EpiFormTemplate.EpiForm.resources
+C:\Insights 2019\Extended Ed\CMZ_BPM_Procs\VS Projects\PartEntry\PartEntry\obj\Debug\EpiFormTemplate.Properties.Resources.resources
+C:\Insights 2019\Extended Ed\CMZ_BPM_Procs\VS Projects\PartEntry\PartEntry\obj\Debug\EpiFormTemplate.Resources.Strings.resources
+C:\Insights 2019\Extended Ed\CMZ_BPM_Procs\VS Projects\PartEntry\PartEntry\obj\Debug\PartEntry.csproj.GenerateResource.Cache
+C:\Insights 2019\Extended Ed\CMZ_BPM_Procs\VS Projects\PartEntry\PartEntry\obj\Debug\EpiFormTemplate.exe
+C:\Insights 2019\Extended Ed\CMZ_BPM_Procs\VS Projects\PartEntry\PartEntry\obj\Debug\EpiFormTemplate.pdb
+C:\Insights19\Extended Ed\CMZ_BPM_Procs\VS Projects\PartEntry\PartEntry\obj\Debug\EpiFormTemplate.exe
+C:\Insights19\Extended Ed\CMZ_BPM_Procs\VS Projects\PartEntry\PartEntry\obj\Debug\EpiFormTemplate.pdb

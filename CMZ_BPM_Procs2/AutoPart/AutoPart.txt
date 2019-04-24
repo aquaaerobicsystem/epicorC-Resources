@@ -1,0 +1,47 @@
+        private void PartForm_AfterToolClick(object sender, Ice.Lib.Framework.AfterToolClickEventArgs args)
+        {
+            switch (args.Tool.Key)
+            {
+                case "NewMenuTool":
+                    var ctxdata = oTrans.Factory("CallContextBpmData");
+                    var edvPart = oTrans.Factory("Part");
+                    if (ctxdata.HasRow && edvPart.HasRow)
+                    {
+                        var nextseq = GetNextPartSeq();
+                        if (nextseq == 0)
+                        {
+                            MessageBox.Show("Unable to get next part sequence from UDCodeType AutoPart!", "Next Sequence Not Found", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            break;
+                        }
+                        edvPart.CurrentDataRow["PartNum"] = ctxdata.CurrentDataRow["ShortChar01"] + nextseq.ToString("-000000#");
+                        edvPart.Notify(new EpiNotifyArgs(oTrans, edvPart.Row, EpiTransaction.NotifyType.Initialize));
+                    }
+                    break;
+                default:
+                    break;
+            }
+        }
+        private int GetNextPartSeq()
+        {
+            var nextseq = 0;
+            try
+            {
+                using (var ucad = new UserCodesAdapter(this.oTrans))
+                {
+                    ucad.BOConnect();
+                    bool result = ucad.GetByID("AutoPart");
+                    if (result)
+                    {
+                        nextseq = Convert.ToInt32(ucad.UserCodesData.UDCodeType.Rows[ucad.UserCodesData.UDCodeType.Rows.Count -1]["SequenceID"]);
+                        nextseq++;
+                        ucad.UserCodesData.UDCodeType.Rows[ucad.UserCodesData.UDCodeType.Rows.Count - 1]["SequenceID"] = nextseq;
+                        ucad.Update();
+                    }
+                }
+            }
+            catch (System.Exception ex)
+            {
+                ExceptionBox.Show(ex);
+            }
+            return nextseq;
+        }
