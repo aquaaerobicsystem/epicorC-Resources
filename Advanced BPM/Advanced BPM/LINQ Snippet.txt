@@ -1,0 +1,15 @@
+//Example #1 - Use either example but not both!
+
+((from PurAgent_Row in Db.PurAgent
+where PurAgent_Row.Company == CompanyID &&
+      PurAgent_Row.BuyerID == ttPOApvMsgRow.MsgTo
+select PurAgent_Row.EMailAddress).FirstOrDefault()).ToString() ?? string.Empty
+
+
+
+// Example #2
+
+this.Db.PurAgent
+    .Where(row => row.Company == CompanyID && row.BuyerID == ttPOApvMsgRow.MsgTo)
+    .Select(row => row.EMailAddress)
+    .FirstOrDefault() ?? string.Empty

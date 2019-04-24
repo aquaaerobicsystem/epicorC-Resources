@@ -1,0 +1,9 @@
+C:\Insights 2019\Labs\inetpub\wwwroot\ERP10\Server\Assemblies\EpiBPMTemplate.exe.config
+C:\inetpub\wwwroot\ERP10\Server\Assemblies\EpiBPMTemplate.exe.config
+C:\inetpub\wwwroot\ERP10\Server\Assemblies\EpiBPMTemplate.exe
+C:\inetpub\wwwroot\ERP10\Server\Assemblies\EpiBPMTemplate.pdb
+C:\Insights 2019\Labs\Intro to c#\EpiBPMTemplate1\EpiBPMTemplate1\obj\Debug\EpiBPMTemplate1.csprojResolveAssemblyReference.cache
+C:\Insights 2019\Labs\Intro to c#\EpiBPMTemplate1\EpiBPMTemplate1\obj\Debug\EpiBPMTemplate.Resources.Strings.resources
+C:\Insights 2019\Labs\Intro to c#\EpiBPMTemplate1\EpiBPMTemplate1\obj\Debug\EpiBPMTemplate1.csproj.GenerateResource.Cache
+C:\Insights 2019\Labs\Intro to c#\EpiBPMTemplate1\EpiBPMTemplate1\obj\Debug\EpiBPMTemplate.exe
+C:\Insights 2019\Labs\Intro to c#\EpiBPMTemplate1\EpiBPMTemplate1\obj\Debug\EpiBPMTemplate.pdb

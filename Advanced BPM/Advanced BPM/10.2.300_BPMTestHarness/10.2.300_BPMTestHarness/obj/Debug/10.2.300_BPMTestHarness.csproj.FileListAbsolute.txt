@@ -1,0 +1,14 @@
+C:\inetpub\wwwroot\ERP10\Server\Assemblies\EpiBPMTemplate.exe.config
+C:\inetpub\wwwroot\ERP10\Server\Assemblies\EpiBPMTemplate.exe
+C:\inetpub\wwwroot\ERP10\Server\Assemblies\EpiBPMTemplate.pdb
+C:\Insights 2019\Labs\Intro to c#\EpiBPMTemplate1\EpiBPMTemplate1\obj\Debug\EpiBPMTemplate.Resources.Strings.resources
+C:\Insights 2019\Labs\Intro to c#\EpiBPMTemplate1\EpiBPMTemplate1\obj\Debug\10.2.300_BPMTestHarness.csproj.GenerateResource.Cache
+C:\Insights 2019\Labs\Intro to c#\EpiBPMTemplate1\EpiBPMTemplate1\obj\Debug\EpiBPMTemplate.exe
+C:\Insights 2019\Labs\Intro to c#\EpiBPMTemplate1\EpiBPMTemplate1\obj\Debug\EpiBPMTemplate.pdb
+C:\Insights 2019\Extended Ed\Advanced BPM\10.2.300_BPMTestHarness\10.2.300_BPMTestHarness\obj\Debug\EpiBPMTemplate.exe
+C:\Insights 2019\Extended Ed\Advanced BPM\10.2.300_BPMTestHarness\10.2.300_BPMTestHarness\obj\Debug\EpiBPMTemplate.pdb
+C:\Insights19\Extended Ed\Advanced BPM\10.2.300_BPMTestHarness\10.2.300_BPMTestHarness\obj\Debug\EpiBPMTemplate.exe
+C:\Insights19\Extended Ed\Advanced BPM\10.2.300_BPMTestHarness\10.2.300_BPMTestHarness\obj\Debug\EpiBPMTemplate.pdb
+C:\Insights19\Extended Ed\Advanced BPM\10.2.300_BPMTestHarness\10.2.300_BPMTestHarness\obj\Debug\10.2.300_BPMTestHarness.csprojResolveAssemblyReference.cache
+C:\Insights19\Extended Ed\Advanced BPM\10.2.300_BPMTestHarness\10.2.300_BPMTestHarness\obj\Debug\EpiBPMTemplate.Resources.Strings.resources
+C:\Insights19\Extended Ed\Advanced BPM\10.2.300_BPMTestHarness\10.2.300_BPMTestHarness\obj\Debug\10.2.300_BPMTestHarness.csproj.GenerateResource.Cache
