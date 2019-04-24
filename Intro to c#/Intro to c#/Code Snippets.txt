@@ -1,0 +1,189 @@
+
+// Workshop – Add a method call to the InitializeCustomCode method
+
+private string _mymessage;
+
+public void InitializeCustomCode()
+{
+    // ** Wizard Insert Location - Do not delete 'Begin/End Wizard Added Variable Initialization' lines **
+    // Begin Wizard Added Variable Initialization
+
+    // End Wizard Added Variable Initialization
+
+    // Begin Wizard Added Custom Method Calls
+
+    // End Wizard Added Custom Method Calls
+     _mymessage = "This is my message";
+     ShowMyMessage();
+}
+
+private void ShowMyMessage()
+{
+     MessageBox.Show(_mymessage);
+} 
+
+// Workshop – Re-using Methods, Passing Parameters and Using Return Types
+
+public void InitializeCustomCode()
+{
+
+
+    // ** Wizard Insert Location - Do not delete 'Begin/End Wizard Added Variable Initialization' lines **
+    // Begin Wizard Added Variable Initialization
+
+    // End Wizard Added Variable Initialization
+
+    // Begin Wizard Added Custom Method Calls
+
+    // End Wizard Added Custom Method Calls
+
+
+    //_mymessage = "This is my message";
+    //ShowMyMessage();
+    int dayno = (int)DateTime.Now.DayOfWeek;
+    MessageBox.Show(ShowMyMessage(dayno));            
+}
+
+private string ShowMyMessage(int dayno)
+{
+    //MessageBox.Show(_mymessage);
+    string daydesc;
+
+    switch (dayno)
+    {
+        case 1:
+            daydesc = "Monday";
+            break;
+        case 2:
+            daydesc = "Tuesday";
+            break;
+        case 3:
+            daydesc = "Wednesday";
+            break;
+        case 4:
+            daydesc = "Thursday";
+            break;
+        case 5:
+            daydesc = "Friday";
+            break;
+        case 6:
+            daydesc = "Saturday";
+            break;
+         case 0:
+            daydesc = "Sunday";
+            break;
+         default:
+            daydesc = "Unknown";
+            break;
+    }
+
+    int hour = DateTime.Now.Hour;
+
+    if (hour >= 0 && hour <= 11)
+        daydesc += " Morning";
+    else if (hour > 11 && hour <= 17)
+        daydesc += " Afternoon";
+    else
+        daydesc += " Evening";
+
+    string fulltimeofday = DateTime.Now.TimeOfDay.ToString();
+    string timeofday = fulltimeofday.Substring(0, 8);
+
+    return "It is " + daydesc + " at " + timeofday;
+}
+
+// Workshop – Refactoring the customization
+
+private void ShowMyMessage()
+{
+    var dayno = (int)DateTime.Now.DayOfWeek;
+    string daydesc;
+
+    switch (dayno)
+    {
+        case 1:
+            daydesc = "Monday";
+            break;
+        case 2:
+            daydesc = "Tuesday";
+            break;
+        case 3:
+            daydesc = "Wednesday";
+            break;
+        case 4:
+            daydesc = "Thursday";
+            break;
+        case 5:
+            daydesc = "Friday";
+            break;
+        case 6:
+            daydesc = "Saturday";
+            break;
+        case 0:
+            daydesc = "Sunday";
+            break;
+        default:
+            daydesc = "Unknown";
+            break;
+    }
+
+    var hour = (int)DateTime.Now.Hour;
+
+    if (hour >= 0 && hour <= 11)
+        daydesc += " Morning";
+    else if (hour > 11 && hour <= 17)
+        daydesc += " Afternoon";
+    else
+        daydesc += " Evening";
+
+    string fulltimeofday = DateTime.Now.TimeOfDay.ToString();
+    string timeofday = fulltimeofday.Substring(0, 8);
+
+    MessageBox.Show("It is " + daydesc + " at " + timeofday);
+}
+
+// Workshop – Using the Rule Wizard
+
+if (edvOrderHed.HasRow)
+{
+	var orderval = Convert.ToDecimal(edvOrderHed.dataView[edvOrderHed.Row]["OrderAmt"]);
+	var discount = Convert.ToDecimal(edvOrderHed.dataView[edvOrderHed.Row]["DiscountPercent"]);
+	if (orderval < 100 && discount > 5)
+		MessageBox.Show("Discounts exceeding 5% are not advised for orders less than $100");
+}
+
+// Workshop - Using EpiShapes
+if (edvOrderHed.HasRow)
+{
+    var orderval = Convert.ToDecimal(edvOrderHed.dataView[edvOrderHed.Row]["OrderAmt"]);
+    var discount = Convert.ToDecimal(edvOrderHed.dataView[edvOrderHed.Row]["DiscountPercent"]);
+    if (orderval < 100 && discount > 5)
+    {
+        esDiscountWarn.Visible = true;
+        esDiscountWarn.EnabledCaption = "Excessive Discount";
+        esDiscountWarn.Status = StatusTypes.Warning;
+    }
+}
+
+// Workshop - Before Field Change Event.
+
+private void OrderHed_BeforeFieldChange(object sender, DataColumnChangeEventArgs args) 
+{ 
+    // ** Argument Properties and Uses ** 
+    // args.Row["FieldName"] 
+    // args.Column, args.ProposedValue, args.Row 
+    // Add Event Handler Code 
+    switch (args.Column.ColumnName) 
+    {
+        case "DiscountPercent": 
+            var newdiscount = (decimal)args.ProposedValue;
+            if (newdiscount > 10 ) 
+            { 
+                MessageBox.Show("Discounts greater then 10% are not allowed!", "Excessive Discount", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                args.ProposedValue = args.Row["DiscountPercent"];
+            } 
+            break;
+    }
+}
+
+
