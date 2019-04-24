@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <!-- Entries in the appSettings and userSettings nodes must be in this format:
+  <name value="" />
+  otherwise they will not be parsed correctly by the AppSettingsHandler class.
+  Node names must be unique as well.  For example, having two nodes named 'UserID'
+  would cause problems.
+  Bool settings must have the additional attribute bool="".
+  Enumeration-type settings must have their possible values in an "options" attribute,
+  for example options="Last|List|Windows|None".
+ -->
+  <appSettings>
+    <!-- Enter the URL of your appserver.  Format is "net.tcp://serverName/SiteName/ -->
+    <AppServerURL value="net.tcp://EPICORTI/ERP10" />
+    <!-- Can set default language code for startup -->
+    <CultureCode value="enu" />
+    <!-- Can set default culture for logon window before session is opened -->
+    <LogonCultureName value="en-US" />
+    <ResourceFile value=".\res\MfgBaseImages.resources" />
+    <CustomResourceFile value="" />
+    <ToolbarSettings value=".\res\ToolbarSettings.xml" />
+    <ProductID value="Epicor" />
+    <Version value="10.2.300.2" />
+    <SplashImage value="" />
+    <ProductBrandText value="" />
+    <ProductBrandIcon value="" />
+    <ProductLogonImage value="" />
+    <HelpAboutImage value="" />
+    <HelpAboutTitleText value="" />
+    <HelpAboutCopyrightText value="" />
+    <HelpAboutCopyrightURL value="" />
+    <HelpAboutProductText value="" />
+    <MESCustomMenuID value="" />
+    <HHCustomMenuID value="" />
+    <MESImage value="" />
+    <MaxBOMRU value="100" />
+    <MaxClssAttrMRU value="20" />
+    <SysmonPort value="7777" />
+    <AlternateCacheFolder value="" />
+    <SessionManager value="ActiveHidden" options="ActiveHidden|ActiveInTray|Disabled" />
+    <!-- Determines whether the SessionManager is used and if the icon is in the system tray. -->
+    <SessionManagerUri value="tcp://localhost:7779/SessionManager.rem" />
+    <!-- Specifies the URI of the Session Manager. This must be on the same computer. -->
+    <EnterpriseSearchURL value="" />
+    <!-- Specifies the behavior when a duplicate attachment ID exists, prompt for new id or auto append DateStamp -->
+    <DuplicateAttachmentMode value="Prompt" options="Prompt|AutoDateStamp" />
+    <!-- Specifies the behavior when a duplicate DocStar attachment ID exists for current record, prompt or auto add version-->
+    <DocStarDuplicateAttachmentMode value="Prompt" options="Prompt|AutoAddVersion" />
+    <WCFCertValidation value="False" bool="" />
+    <!-- Timeout for WCF operations -->
+    <OperationTimeOut value="10200" />
+    <!-- Enable WCF SslStreamSecurity Binding -->
+    <EnableSslStreamSecurity value="False" />
+    <!-- Specifies the CustomBinding type  -->
+    <EndpointBinding value="UsernameWindowsChannel" options="HttpsBinaryUsernameChannel|HttpsBinaryWindowsChannel|HttpsOffloadBinaryUserNameChannel|HttpsBinaryAzureChannel|HttpsOffloadBinaryAzureChannel|HttpBinaryUsernameSslChannel|UsernameSslChannel|Windows|UsernameWindowsChannel" />
+    <PredictiveSearchKeyPressDelay value="500" />
+    <PredictiveSearchPopupFadeDelay value="15000" />
+    <!--<DnsIdentity value="" />-->
+    <!--<EnableMultipleDNSEntriesInSANCertificate value="True"/>-->
+    <!--Azure AD required authentication fields -->
+    <!--Azure AD tenantID - DirectoryID from Azure AD Properties -->
+    <AzureADDirectoryID value="" />
+    <!--Azure AD Web Application ID - Application ID of registered web application -->
+    <AzureADWebAppID value="" />
+    <!--Azure AD Native Client Application ID - Application ID of registered native application -->
+    <AzureADNativeClientAppID value="" />
+    <HomePageUrl value="https://EpicorTI/ERP10/Apps/Erp/Home" />
+  </appSettings>
+  <userSettings>
+    <!-- provide values for UserID and Password to enable auto-login -->
+    <UserID value="" />
+    <Password value="" />
+    <!-- Determines the client menu type -->
+    <LaunchType value="Shell" options="Shell|MainMenu" />
+    <SingleSignOn value="false" bool="" />
+    <DataCollectionUser value="False" bool="" />
+    <StartSystemMonitor value="True" bool="" />
+    <!-- System Monitor values that control how quickly print jobs are scanned
+       Note: all times are in milliseconds i.e. 1000 = 1 second -->
+    <!-- NonPriority used for scheduled reports - should be set high to avoid network traffic
+       Minimum value 30000 -->
+    <SystemMonitorNonPriorityPoll value="30000" />
+    <!-- PriorityPoll used to scan for completed reports after the Print or Print Preview
+       Minimum value 3000, cannot be greater than NonPriority - higher will increase network traffic -->
+    <SystemMonitorPriorityPoll value="3000" />
+    <!-- Duration to scan at high priority - must be less than NonPriority - higher will
+       increase network traffic -->
+    <SystemMonitorPriorityPollDuration value="15000" />
+    <LastLoginID value="" />
+    <LoginDefault value="Windows" options="Last|List|Windows|None" />
+    <FormOpenMode value="" options="|AutoSearch|AutoPopulate" />
+    <DefaultSearchFormLocation value="top" options="top|center" />
+    <DefaultSearchPageSize value="100" />
+    <SmtpServer value="epicorti.net" />
+    <SelectTextOnEnter value="False" bool="" />
+    <!-- AutoScaleMode determines how forms scale bases upon the DPI of the system they -->
+    <!-- are running on. -->
+    <AutoScaleMode value="None" options="None|Dpi" />
+    <!-- Determines how theming is applied.
+  if Value="None" then no theme is loaded.
+  if Value="Default" then the default theme from the server is loaded.
+  if Value="ThemeName.isl", then theme with name=ThemeName is loaded from the server.
+  if Value="Path\ThemeName.isl", then theme with name=ThemeName is loaded from specified path.-->
+    <Style value="Default" options="SpecifyName|None|Default" />
+    <ContextMenuNestingLevel value="0" />
+    <!-- Enables Test Expansion Tools Menu on the forms -->
+    <TextExpansionTest value="True" bool="" />
+    <!-- Determines how auto-completion works in the combo control when the user types in the text field of the combo -->
+    <ComboAutoCompleteMode value="AutoCompleteOnly" options="AutoCompleteOnly|DropDownList" />
+    <!-- Default Ribbon behavior on all forms, true to show the ribbon, false for standard toolbar -->
+    <RibbonView value="false" bool="" />
+    <!--SpLogonMode allows specifying user credentials for SharePoint attachments. Default will use current Windows account, and Interactive will show dialog window to enter name and password. -->
+    <!--<SpLogonMode value="Interactive" options="Default|Interactive" />-->
+    <!--DocStarLogonMode allows specifying user credentials for DocStar attachments. Default will use current Windows account, and Interactive will show dialog window to enter name and password. -->
+    <DocStarLogonMode value="Interactive" options="Default|Interactive" />
+    <!-- Indicates whether or not the white space before a label's text should be ignored when checking for a click in the label -->
+    <IgnoreWhiteSpaceOnLabelClick value="False" bool="" />
+  </userSettings>
+  <deploymentSettings>
+    <deploymentServer uri="\\EPICORTI\ERP10.2.300.0Deployment" />
+    <deploymentType value="zip" options="xcopy|zip" />
+    <deploymentPackage value="ReleaseClient.zip" />
+    <!-- only used when deployment type is zip -->
+    <doDateComparison value="False" bool="" />
+    <!-- set to false and the deployment will copy all files from the -->
+    <!-- deployment server, set to true and the deployment will use -->
+    <!-- date comparison to do the copy -->
+    <clearClientDir value="Core" options="Never|Always|Prompt|Core" />
+    <!-- Determines if the client install directory is cleared prior to doing an update -->
+    <clearDNS value="Always" options="Never|Always|Prompt" />
+    <!-- Determines if the local client cache is cleared prior to doing an update. -->
+    <optimizeAssemblies value="false" bool="" />
+    <!-- this setting requires the user to have admin rights on their machine -->
+  </deploymentSettings>
+  <helpSettings>
+    <!-- if you want your htm pages hosted on a separate server than the deployment
+   files, then you would enter the uri in the helpServer uri attribute -->
+    <helpServer uri="" />
+    <courseServer uri="" />
+    <E9EducationKeysServer uri="" />
+    <LearningCenter href="https://erpcustomer.epicor.com/lms/public/signIn.do" />
+    <epicorOnTheWebSettings>
+      <CustomerCenter product="Epicor" href="https://epicweb.epicor.com/Support/epicor9/Pages/default.aspx" />
+      <OnlineSupport product="Epicor" href="https://epicweb.epicor.com/Support/MyEPICweb/Pages/default.aspx" />
+    </epicorOnTheWebSettings>
+    <AnnotationsOverrideXSL value="" />
+    <featureSummaryHomePage value="fs.htm" />
+  </helpSettings>
+  <sortSettings>
+    <!-- this section is used to define custom sort algorithms for -->
+    <!-- string type columns that appear in a grid. -->
+    <!-- Valid elements are as follows: -->
+    <!--   <stringSort value="TableName.ColumnName" />  -->
+    <!--   <wordSort value-"TableName.ColumnName" />  -->
+    <!-- TableName.ColumName is the name of the table containing the column -->
+    <!-- and the name of the column (the two values have to be separated by a '.' -->
+    <!-- For instance "Part.PartNum" would be a valid value. -->
+    <!-- If a column has a 'like' value and the like has a sort specified here, -->
+    <!-- then that sort will be used first.  -->
+    <!-- By specifying a value of 'default' that indicates that the given sort style will -->
+    <!-- be used by default for all string columns -->
+    <stringSort value="default" />
+  </sortSettings>
+  <customizations>
+    <customization name="ERP10.2.300.7" directoryName="Update" version="10.2.300.7" deploymentType="ZIP" />
+  </customizations>
+  <Shortcut>
+     <Company></Company>
+     <Plant></Plant>
+     <AppServerURL></AppServerURL>
+     <DateTime></DateTime>
+     <Originator></Originator>
+     <Process>
+        <ProcessID></ProcessID>
+        <Description></Description>
+     </Process>
+     <RecordIDS KeyFields="" KeyFieldsType="System.String" TableName="" DataSourceType="">
+        <RecordID></RecordID>
+     </RecordIDS>
+     <Search>
+        <NamedSearch>Search Name</NamedSearch>
+        <SearchCriteria>Search Criteria</SearchCriteria>
+     </Search>
+  </Shortcut>
+</configuration>
